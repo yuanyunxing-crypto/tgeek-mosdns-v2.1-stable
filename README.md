@@ -12,21 +12,42 @@ Apple 优化：将 apple_optimization=0，防止启用旧 Apple UDP 备用解析
 Bootstrap、终端自带 DoH/DoT、其它服务的 DNS 不在“没有明文 DNS”的保证范围。
 安装
 将 .sh 上传到 /root/tgeek-mosdns-v2.1-stable.sh：
-
+```
 sh -n /root/tgeek-mosdns-v2.1-stable.sh
+```
+```
 sh /root/tgeek-mosdns-v2.1-stable.sh audit
+```
+```
 sh /root/tgeek-mosdns-v2.1-stable.sh install
+```
 如使用早期 v2.0：同样执行 install，或 upgrade，自动识别已有 v2.0 管理区块。
 
 维护
+```
 tgeek-mosdns status
+```
+```
 tgeek-mosdns audit
+```
+```
 tgeek-mosdns update
+```
+```
 tgeek-mosdns add example.com
+```
+```
 tgeek-mosdns remove example.com
+```
+```
 tgeek-mosdns rollback last
+```
+```
 tgeek-mosdns rollback initial
+```
+```
 tgeek-mosdns uninstall
+```
 rollback last：恢复最近一次成功执行变更前的状态。
 rollback initial：恢复首次安装 v2.1 之前的状态；如果从 v2.0 升级，就恢复到升级前的 v2.0 管理脚本、UCI、白名单及定时任务。
 uninstall：与 rollback initial 等价。
